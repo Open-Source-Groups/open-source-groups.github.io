@@ -1,0 +1,52 @@
+title: Open Source Groups
+description: Lorem ipsum dolor sit amet, consectetur. Nulla dictum elit et.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "open-source-groups.github.io" # the base hostname & protocol for your site
+owner: Open Source Groups
+first_published: 2018
+
+logo: "/css/img/os-logo.svg"
+
+google_site_verification: googleXXXXXXXXXXXXXXXX.html
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+sass:
+ style: compressed
+
+include: ['_pages']
+exclude: ['README.md']
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social: 
+  github: https://github.com/Open-Source-Groups
+  facebook: https://facebook.com
+  twitter: https://twitter.com
+  email: /#contact-section
+
+# Contact page action
+mailaction: https://formspree.io/
+
+plugins:
+  - jemoji
+  - jekyll-admin
+  - jekyll-autoprefixer
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+autoprefixer:
+  browsers:
+  - last 2 versions
+
+html_proofer:
+  check_favicon: true
+  check_html: true
+  allow_hash_href: true
+  http_status_ignore: [999,522,403]
+  file_ignore:
+    - /a.*regexp*/
+    - a_string
+  url_ignore:

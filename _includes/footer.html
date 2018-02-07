@@ -1,0 +1,27 @@
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div>
+        <ul class="list-inline social-buttons">
+          {% for icon in site.social %}
+            {% if icon[1] %}
+              {% if icon[0] == 'email' %}
+                {% if page.layout == 'landing' %}
+                  <li><a class="page-scroll" href="#contact-section"><i class="fa fa-envelope" style="position:relative;font-size:24px;top:-3px;left:0px;"></i></a></li>
+                {% else %}
+                  <li><a href="/#contact-section"><i class="fa fa-envelope" style="position:relative;font-size:24px;top:-3px;left:0px;"></i></a></li>
+                {% endif %}
+              {% else %}
+                <li><a target="_blank" href="{{ icon[1] }}"><i class="fa fa-{{ icon[0] }}"></i></a></li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <span class="copyright">Copyright © {{ site.first_published }}&nbsp;{{ site.owner }}&nbsp;|&nbsp;<a href="{{ '/credits' | prepend: site.url }}">Credits</a></span>
+      </div>
+    </div>
+  </div>
+</footer>

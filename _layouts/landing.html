@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body id="page-top" class="index">
+  {% include header.html %}
+  
+  <!-- Header -->
+  <header>
+    <div id="banner" class="container">
+      <a class="anchor" id="banner-section"></a>
+      <div class="banner-text">
+        <div class="banner-heading">{{ site.title }}</div>
+        <!-- <div class="intro-lead-in">Date</div> -->
+        <div class="banner-desc">{{ site.description }}</div>
+        <a href="#about-section" class="page-scroll btn btn-shadow btn-xl">Tell Me More</a>
+      </div>
+    </div>
+  </header>
+  
+  {% include mailing.html %}
+  {% include about.html %}
+  {% include contact.html %}
+  {% include footer.html %}
+  {% include scripts.html %}
+  
+</body>
+</html>

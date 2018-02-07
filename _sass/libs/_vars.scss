@@ -1,0 +1,32 @@
+
+$palette: (
+  bg: #fff,
+  bg-alt: #f6f6f9,
+  bg-dark: #222,
+  fg: rgba(#000, 0.7),
+  fg-dark: #00283c,
+  accent: #3cb371,
+  accent-hover: darken(#3cb371, 4%),   
+  // muted: rgba(#fff, 0.5)
+  muted: #999
+);
+
+$font: (
+  sans-serif: (Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif),
+  serif: ("Droid Serif","Roboto Slab", Georgia, serif),
+  slab: ("Roboto Slab", "Droid Serif", Georgia, serif)
+);
+
+/// Gets a palette value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _palette($keys...) {
+  @return val($palette, $keys...);
+}
+
+/// Gets a font value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _font($keys...) {
+  @return val($font, $keys...);
+}
