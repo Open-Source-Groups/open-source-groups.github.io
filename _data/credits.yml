@@ -1,0 +1,35 @@
+- name: Jekyll
+  source: https://jekyllrb.com/
+  license: MIT
+
+- name: Bootstrap
+  source: https://getbootstrap.com/
+  license: MIT
+  
+- name: jQuery
+  source: https://jquery.com/
+  license: MIT
+  
+- name: Font Awesome
+  source: https://fontawesome.com/
+  license: MIT
+  
+- name: Normalize.css
+  source: https://necolas.github.io/normalize.css/
+  license: MIT
+  
+- name: jqBootstrapValidation
+  source: https://reactiveraven.github.io/jqBootstrapValidation/
+  license: MIT
+  
+- name: Animated Header
+  source: https://github.com/codrops/AnimatedHeader
+  license: MIT
+  
+- name: Html-Proofer
+  source: https://github.com/gjtorikian/html-proofer
+  license: MIT
+  
+- name: Jekyll-Autoprefixer
+  source: https://github.com/vwochnik/jekyll-autoprefixer
+  license: MIT

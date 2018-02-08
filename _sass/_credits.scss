@@ -1,0 +1,23 @@
+section#credits {
+  margin-top: 50px;
+  .container {
+    padding: 55px 15px 100px;
+    .section-subheading {
+      margin-bottom: 28px;
+    }
+  }
+  .credit-list {
+    list-style: none;
+    padding: 1.5vh 7vw 3vh;
+    li {
+      line-height: 1.75;
+      // padding: 4px 0;
+      a {
+        font-family: _font(slab);
+        font-family: _font(serif);
+        font-size: 120%;
+        font-weight: 600;
+      }
+    }
+  }
+}

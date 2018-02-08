@@ -4,3 +4,19 @@ permalink: /credits
 title: "Credits"
 published: true
 ---
+
+<section id="credits">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Credits</h2>
+        <h3 class="section-subheading text-muted">This site was created using the following open source tools</h3>
+      </div>
+    </div>
+    <ul class="credit-list">
+      {% for credit in site.data.credits %}
+        <li class="list-item"><a href="{{ credit.source }}" target="_blank">{{ credit.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
