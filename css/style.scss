@@ -7,10 +7,11 @@
 @import 'libs/vars';
 @import '404';
 @import 'about';
+@import 'credits';
 @import 'footer';
 @import 'form';
 
-$baseurl: '{{ site.baseurl }}/css/img';
+$baseurl: '{{ site.url }}/css/img';
 $on-laptop:      800px;
 $on-palm:        600px;
 
@@ -227,6 +228,7 @@ aside.clients,
   }
   .navbar-collapse {
     border-color: rgba(#fff, 0.02);
+    // border-color: transparent !important;
   }
   .navbar-toggle {
     background-color: _palette(accent);
@@ -253,12 +255,13 @@ aside.clients,
 
 .navbar-default .navbar-nav {
   > li > a {
-    padding-top: 17px;
+    padding-top: 10px;
   }
   > .active > a {
     background-color: transparent;
     color: #fff;
     border-radius: 0;
+    text-shadow: 0 1px 2px rgba(#000,0.6);
     &:hover, &:focus {
       color: _palette(accent-hover);
       background-color: transparent;
@@ -333,7 +336,8 @@ header {
       font-weight: 700;
       line-height: 1;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      // margin-bottom: 18px;
+      margin-bottom: 2.5vh;
     }
     .banner-desc {
       font-family: _font(serif);
@@ -563,6 +567,10 @@ section#contact {
   }
 }
 
+.page-not-found {
+  background-image: url('#{$baseurl}/404.png');
+}
+
 footer {
   position: absolute;
   background: linear-gradient(to top, _palette(bg-dark), #2a2a2a);
@@ -575,7 +583,7 @@ footer {
     color: rgba(#fff, 0.5);
     font-family: _font(sans-serif);
     font-weight: 300;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
     line-height: 1;
     text-transform: none;
     a {
@@ -596,7 +604,7 @@ footer {
 ul.social-buttons {
   margin-bottom: 20px;
   li a {
-    @include transition(all 350ms ease 0ms);
+    @include transition(all 300ms ease 0ms);
     display: block;
     background-color: rgba(#fff, 0.95);
     color: _palette(bg-dark);
@@ -615,7 +623,6 @@ ul.social-buttons {
         position: relative;
         font-size: 30px;
         top: -2.5px;
-        left: 0.5px;
       }
     }
     &:hover, &:active {
