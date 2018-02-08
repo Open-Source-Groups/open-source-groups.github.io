@@ -10,8 +10,8 @@ permalink: /404
 
 <div class="page-not-found">
   <div class="row">
-    <p>Oops! This page is still under construction or not available at the moment.<br>You will be redirected back to the <a href="{{ site.url }}">home page</a> in a few seconds.</p>
+    <p>Oops! This page is still under construction or not available at the moment.<br>You will be redirected back to the <a href="{{ '/' | prepend: site.baseurl }}">home page</a> in a few seconds.</p>
   </div>
   </div>
   
-  <meta http-equiv="refresh" content="6; URL={{ site.url }}" />
+  <meta http-equiv="refresh" content="6; URL={{ '/' | prepend: site.baseurl }}" />
