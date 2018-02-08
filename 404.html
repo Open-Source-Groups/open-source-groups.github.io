@@ -1,12 +1,11 @@
 ---
 layout: default
-permalink: /404.html
+permalink: /404
 ---
 
 <!--background color-->
 <script type="text/javascript">
-  document.write ('<body style="background-image: url("{{ site.baseurl }}/css/img/404_text.png");background-attachment: fixed;">')
-  // document.write ('<body style="background-color: #f7f7f8;background-attachment: fixed;">')
+  document.write ('<body style="background-image: url("{{ "/css/img/404_text.png" | prepend: site.baseurl }}");background-attachment: fixed;">')
 </script>
 
 <div class="page-not-found">
@@ -15,4 +14,4 @@ permalink: /404.html
   </div>
   </div>
   
-  <!-- <meta http-equiv="refresh" content="6; URL={{ site.url }}" /> -->
+  <meta http-equiv="refresh" content="6; URL={{ site.url }}" />
