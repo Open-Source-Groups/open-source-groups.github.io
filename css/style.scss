@@ -11,7 +11,7 @@
 @import 'footer';
 @import 'form';
 
-$baseurl: '{{ site.url }}/css/img';
+$baseurl: '{{ site.baseurl }}/css/img';
 $on-laptop:      800px;
 $on-palm:        600px;
 
@@ -622,7 +622,7 @@ ul.social-buttons {
       &:first-child {
         position: relative;
         font-size: 30px;
-        top: -2.5px;
+        top: -1.5px;
       }
     }
     &:hover, &:active {
