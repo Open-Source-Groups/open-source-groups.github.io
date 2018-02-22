@@ -3,11 +3,12 @@ description: Lorem ipsum dolor sit amet, consectetur. Nulla dictum elit et.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "open-source-groups.github.io" # the base hostname & protocol for your site
 owner: Open Source Groups
+email: OpenSourceGroups@gmail.com
 first_published: 2018
-
 logo: "/css/img/os-logo.svg"
 
 google_site_verification: googleXXXXXXXXXXXXXXXX.html
+mailaction: https://www.enformed.io/e8hc6wub
 
 # Build settings
 markdown: kramdown
@@ -27,7 +28,7 @@ social:
   email: /#contact-section
 
 # Contact page action
-mailaction: https://formspree.io/
+# mailaction: https://formspree.io/OpenSourceGroups@gmail.com
 
 plugins:
   - jemoji

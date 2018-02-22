@@ -4,12 +4,12 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading">Contact Us</h2>
-        <h3 class="section-subheading text-muted">We will respond to your message as soon as possible.<!-- You may send us your request via <a href="https://www.facebook.com/malaysianstudentstechnologyconference">Facebook Message</a>--></h3>
+        <h3 class="section-subheading text-muted">We'll respond to your message as soon as possible.</h3>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-12 contact-form">
-        <form name="sentMessage" id="contactForm" action="{{ site.mailaction }}" method="POST" novalidate>
+        <form name="sentMessage" id="contactForm" action="{{site.mailaction}}" method="POST">
           <div class="row">
             <div class="col-md-6">
               <div class="control-group form-group">
@@ -37,6 +37,10 @@
               <button type="submit" value="Send" class="btn btn-shadow btn-xl">Send Message</button>
             </div>
           </div>
+          <!-- Handles submission redirect -->
+          <input type="hidden" name="*redirect" value="{{ site.baseurl }}"/>
+          <!-- Keep evil robots from submitting form responses -->
+          <input type="hidden" name="*honeypot"/>
         </form>
       </div>
     </div>
