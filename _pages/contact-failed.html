@@ -1,0 +1,21 @@
+---
+layout: default
+permalink: /contact-failed
+---
+
+<section id="contactFailed" class="page-wrapper">
+  <div class="container contact-response">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="section-heading">Oops</h1>
+        <h3 class="section-subheading text-muted">It looks like there's been an issue...</h3>
+      </div>
+    </div>
+    <center><a href="{{ '/#contact-section' | prepend: site.baseurl }}" class="page-scroll btn btn-lg">Try Again</a></center>
+    <div class="redirect-tip text-muted">
+      <p>You'll be redirected momentarily...</p>
+    </div>
+  </div>
+</section>
+
+<meta http-equiv="refresh" content="6; URL={{ '/' | prepend: site.baseurl }}"/>
