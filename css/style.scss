@@ -117,14 +117,14 @@ aside.clients,
 }
 
 .btn {
-  @include transition(all 300ms ease 0ms);
+  @include transition(all 350ms ease 0ms);
   @include transform(translateY(0));
   text-shadow: 0 1px 1px rgba(0,0,0,0.6);
   &:focus, &:active, &.active, &:active:focus {
     outline: 0;
   }
   &:active, &.active, &:active:focus {
-    @include transform(transform 150ms ease 0ms);
+    @include transition(transform 150ms ease 0ms);
     @include transform(translateY(3px));
   } 
 }
@@ -161,12 +161,26 @@ aside.clients,
   border-color: _palette(accent);
 }
 
+.modal {
+  visibility: hidden;
+}
+
 .btn-xl {
   font-size: 18px;
   font-weight: 700;
   padding: 18px 28px;
   &:hover {
     padding: 18px 35px
+  }
+}
+
+.btn-lg {
+  font-size: 18px;
+  font-weight: 700;
+  min-width: 150px;
+  padding: 12px 24px;
+  &:hover {
+    padding: 12px 30px
   }
 }
 
@@ -179,7 +193,7 @@ aside.clients,
   }
 }
 
-.btn-sm, .btn-xl {
+.btn-sm, .btn-lg, .btn-xl {
   background-color: _palette(accent);
   color: #fff;
   font-family: _font(sans-serif);
@@ -191,6 +205,7 @@ aside.clients,
     background-color: _palette(accent-hover);
     color: #fff;
     border-color: _palette(accent);
+    box-shadow: 0 1px 3px rgba(#000, 0.85);
   }
   &.active {
     background-image: none;
@@ -206,10 +221,10 @@ aside.clients,
 }
 
 .open .dropdown-toggle {
-  &.btn-sm, &.btn-xl {
+  &.btn-sm, &.btn-lg, &.btn-xl {
     background-image: none;
   }
-  &.btn-xl {
+  &.btn-lg, &.btn-xl {
     border-color: _palette(accent);
     color: #fff;
     background-color: _palette(accent-hover);
@@ -328,7 +343,7 @@ header {
   height: 100vh;
   .banner-text {
     text-shadow: 0 1px 1px rgba(#000, 0.6);
-    padding-top: 32vh;
+    padding-top: 31.5vh;
     padding-bottom: 50px;
     .banner-heading {
       font-family: _font(sans-serif);
@@ -340,7 +355,8 @@ header {
       margin-bottom: 2.5vh;
     }
     .banner-desc {
-      font-family: _font(serif);
+      color: rgba(#fff, 0.875);
+      font-family: _font(sans-serif);
       font-size: 2vw;
       line-height: 22px;
       margin-bottom: 18vh;
@@ -359,7 +375,7 @@ section {
   .container {
     width: 90vw;
     margin: 0 auto;
-    padding: 65px 15px 85px;
+    padding: 60px 15px 85px;
   }
 }
 
@@ -374,6 +390,12 @@ section {
   position: relative;
   top: -55px;
   visibility: hidden;
+}
+
+h1.section-heading {
+  font-size: 70px;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 aside.clients h2,
@@ -391,7 +413,7 @@ section h3.section-subheading {
   line-height: 1.5;
   text-transform: none;
   width: 75vw;
-  margin: 2.5vh auto 5vh;
+  margin: 2.5vh auto 6.5vh;
   a:hover {
     color: _palette(accent-hover);
   }
@@ -567,6 +589,25 @@ section#contact {
   }
 }
 
+.page-wrapper {
+  margin-top: 50px;
+}
+
+.contact-response {
+  padding: 12vh 5vw 5vh !important;
+  .section-subheading {
+    margin-bottom: 9vh;
+  }
+}
+
+.redirect-tip {
+  font-family: _font(sans-serif);
+  font-size: 12px;
+  font-weight: 100;
+  text-align: center;
+  margin: 2vh auto 0;
+}
+
 .page-not-found {
   background-image: url('#{$baseurl}/404.png');
 }
@@ -575,8 +616,9 @@ footer {
   position: absolute;
   background: linear-gradient(to top, _palette(bg-dark), #2a2a2a);
   text-align: center;
-  right: 0;
   left: 0;
+  right: 0;
+  bottom: -2vh;
   padding: 35px 0 20px;
   border-top: 1px outset rgba(#444, 0.75);
   .copyright {
@@ -590,6 +632,7 @@ footer {
       color: rgba(#fff, 0.5);
       &:hover {
         color: _palette(accent);
+        text-decoration: none;
       }
     }
   }
