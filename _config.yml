@@ -8,6 +8,8 @@ first_published: 2018
 logo: "/css/img/os-logo.svg"
 
 google_site_verification: googleXXXXXXXXXXXXXXXX.html
+
+# Contact form action
 mailaction: https://www.enformed.io/e8hc6wub
 
 # Build settings
@@ -23,12 +25,9 @@ exclude: ['README.md']
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social: 
   github: https://github.com/Open-Source-Groups
-  facebook: https://facebook.com
+  google: https://groups.google.com/forum/#!forum/opensourcegroups
   twitter: https://twitter.com
   email: /#contact-section
-
-# Contact page action
-# mailaction: https://formspree.io/OpenSourceGroups@gmail.com
 
 plugins:
   - jemoji
